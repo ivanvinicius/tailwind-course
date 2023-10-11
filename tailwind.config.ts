@@ -5,8 +5,8 @@ const config: Config = {
 
   theme: {
     extend: {
-      colors: {
-        example: '#FFFFFF',
+      gridTemplateColumns: {
+        app: 'minmax(18rem, 20rem) 1fr',
       },
     },
   },
