@@ -4,15 +4,15 @@ import * as RadixSelect from '@radix-ui/react-select'
 import { ChevronDown } from 'lucide-react'
 import { ReactNode } from 'react'
 
-interface Props {
-  placeholder: string
+interface Props extends RadixSelect.SelectProps {
+  placeholder?: string
   children: ReactNode
 }
 
-export function SelectRoot({ placeholder, children }: Props) {
+export function SelectRoot({ placeholder = '', children, ...rest }: Props) {
   return (
-    <RadixSelect.Root>
-      <RadixSelect.Trigger className="h-10.5 flex w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 data-[placeholder]:text-zinc-600">
+    <RadixSelect.Root {...rest}>
+      <RadixSelect.Trigger className="flex h-10.5 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 data-[placeholder]:text-zinc-600">
         <RadixSelect.Value className="text-black" placeholder={placeholder} />
         <RadixSelect.Icon>
           <ChevronDown className="h-5 w-5 text-zinc-500" />

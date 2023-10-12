@@ -1,8 +1,9 @@
-import { Mail } from 'lucide-react'
+import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
 import { Input } from '~/components/form/input'
 import { InputFile } from '~/components/form/input-file'
 import { Select } from '~/components/form/select'
+import { Textarea } from '~/components/form/textarea'
 import { SettingsTabs } from '~/page-components/settings/tabs'
 
 export default function Home() {
@@ -152,7 +153,68 @@ export default function Home() {
               </span>
             </label>
 
-            <div>input</div>
+            <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <Select.Root defaultValue="normal">
+                  <Select.Item value="normal" text="Normal text" />
+                  <Select.Item value="md" text="Markdown" />
+                </Select.Root>
+                <div className="flex items-center gap-3">
+                  <button
+                    className="group border-0 bg-transparent"
+                    type="button"
+                  >
+                    <Bold
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                  <button
+                    className="group border-0 bg-transparent"
+                    type="button"
+                  >
+                    <Italic
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                  <button
+                    className="group border-0 bg-transparent"
+                    type="button"
+                  >
+                    <Link
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                  <button
+                    className="group border-0 bg-transparent"
+                    type="button"
+                  >
+                    <List
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                  <button
+                    className="group border-0 bg-transparent"
+                    type="button"
+                  >
+                    <ListOrdered
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      strokeWidth={3}
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <Textarea
+                id="bio"
+                defaultValue={
+                  "I'm product designer based in Melbourn, Australia. I was born in south Brazil, the city is known as Taio, and it is placed mid-center Santa Catarina State"
+                }
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-form items-center gap-3 py-6">
