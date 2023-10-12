@@ -4,9 +4,11 @@ import { ChangeEvent, ComponentProps } from 'react'
 
 import { useInputFile } from './root'
 
-type Props = ComponentProps<'input'>
+interface Props extends ComponentProps<'input'> {
+  multiple?: boolean
+}
 
-export function InputFileControl(props: Props) {
+export function InputFileControl({ multiple = false, ...rest }: Props) {
   const { id, onFilesSelected } = useInputFile()
 
   function handleSelectFile(event: ChangeEvent<HTMLInputElement>) {
@@ -14,7 +16,7 @@ export function InputFileControl(props: Props) {
 
     const files = Array.from(event.target.files)
 
-    onFilesSelected(files)
+    onFilesSelected(files, multiple)
   }
 
   return (
@@ -23,7 +25,8 @@ export function InputFileControl(props: Props) {
       id={id}
       type="file"
       onChange={handleSelectFile}
-      {...props}
+      multiple={multiple}
+      {...rest}
     />
   )
 }

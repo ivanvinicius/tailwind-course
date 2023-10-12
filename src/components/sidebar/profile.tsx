@@ -26,7 +26,7 @@ export function Profile() {
         type="button"
         title="Sair da aplicação"
       >
-        <LogOut className="h-5 w-5 text-zinc-500 group-hover:text-red-500" />
+        <LogOut className="transition-color  h-5 w-5 text-zinc-500 duration-150 group-hover:text-red-500" />
       </button>
     </div>
   )

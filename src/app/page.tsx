@@ -87,9 +87,11 @@ export default function Home() {
               </span>
             </label>
 
-            <InputFile.Root className="flex items-start gap-6 ">
-              <InputFile.ImagePreview />
-              <InputFile.Trigger />
+            <InputFile.Root>
+              <div className="flex items-start gap-6 ">
+                <InputFile.ImagePreview />
+                <InputFile.Trigger />
+              </div>
               <InputFile.Control />
             </InputFile.Root>
           </div>
@@ -147,7 +149,8 @@ export default function Home() {
 
             <InputFile.Root>
               <InputFile.Trigger />
-              <InputFile.Control />
+              <InputFile.FileList />
+              <InputFile.Control multiple />
             </InputFile.Root>
           </div>
 

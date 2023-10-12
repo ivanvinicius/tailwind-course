@@ -13,7 +13,7 @@ type Props = ComponentProps<'div'>
 interface ContextProps {
   id: string
   files: File[]
-  onFilesSelected: (files: File[]) => void
+  onFilesSelected: (files: File[], multiple: boolean) => void
 }
 
 const InputFileContext = createContext({} as ContextProps)
@@ -22,8 +22,16 @@ function InputFileRoot(props: Props) {
   const [files, setFiles] = useState<File[]>([])
   const id = useId()
 
+  function onFilesSelected(files: File[], multiple: boolean) {
+    if (!multiple) {
+      setFiles(files)
+    } else {
+      setFiles((prevState) => [...prevState, ...files])
+    }
+  }
+
   return (
-    <InputFileContext.Provider value={{ id, files, onFilesSelected: setFiles }}>
+    <InputFileContext.Provider value={{ id, files, onFilesSelected }}>
       <div {...props} />
     </InputFileContext.Provider>
   )
