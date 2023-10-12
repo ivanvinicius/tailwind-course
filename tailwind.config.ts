@@ -19,6 +19,10 @@ const config: Config = {
           25: '#fcfaff',
         },
       },
+
+      height: {
+        '10.5': '2.625rem',
+      },
     },
   },
 
