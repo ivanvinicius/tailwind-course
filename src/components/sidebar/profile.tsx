@@ -23,7 +23,7 @@ export function Profile() {
         </span>
       </div>
 
-      <Button variant="ghost" type="button" title="Sair da aplicação">
+      <Button variant="ghost" type="button" title="Logout">
         <LogOut className="transition-color h-5 w-5 text-zinc-500 duration-150 group-hover/ghost-button:text-red-500" />
       </Button>
     </div>
