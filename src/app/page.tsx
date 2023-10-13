@@ -79,7 +79,7 @@ export default function Home() {
 
             <Input.Root>
               <Input.Prefix>
-                <Mail className="h-5 w-5 text-zinc-500" />
+                <Mail className="h-5 w-5 text-zinc-500 dark:text-zinc-400" />
               </Input.Prefix>
               <Input.Control
                 id="email"
@@ -170,31 +170,31 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Button variant="ghost" type="button">
                     <Bold
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500 dark:group-hover/ghost-button:text-violet-200"
                       strokeWidth={3}
                     />
                   </Button>
                   <Button variant="ghost" type="button">
                     <Italic
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500 dark:group-hover/ghost-button:text-violet-200"
                       strokeWidth={3}
                     />
                   </Button>
                   <Button variant="ghost" type="button">
                     <Link
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500 dark:group-hover/ghost-button:text-violet-200"
                       strokeWidth={3}
                     />
                   </Button>
                   <Button variant="ghost" type="button">
                     <List
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500 dark:group-hover/ghost-button:text-violet-200"
                       strokeWidth={3}
                     />
                   </Button>
                   <Button variant="ghost" type="button">
                     <ListOrdered
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500 dark:group-hover/ghost-button:text-violet-200"
                       strokeWidth={3}
                     />
                   </Button>
