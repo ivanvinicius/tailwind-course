@@ -1,6 +1,8 @@
 import { LogOut } from 'lucide-react'
 import Image from 'next/image'
 
+import { Button } from '../button'
+
 export function Profile() {
   return (
     <div className=" flex items-center gap-3">
@@ -21,13 +23,9 @@ export function Profile() {
         </span>
       </div>
 
-      <button
-        className="group ml-auto border-0 bg-transparent"
-        type="button"
-        title="Sair da aplicação"
-      >
-        <LogOut className="transition-color  h-5 w-5 text-zinc-500 duration-150 group-hover:text-red-500" />
-      </button>
+      <Button variant="ghost" type="button" title="Sair da aplicação">
+        <LogOut className="transition-color h-5 w-5 text-zinc-500 duration-150 group-hover/ghost-button:text-red-500" />
+      </Button>
     </div>
   )
 }

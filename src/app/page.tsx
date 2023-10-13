@@ -1,5 +1,6 @@
 import { Bold, Italic, Link, List, ListOrdered, Mail } from 'lucide-react'
 
+import { Button } from '~/components/button'
 import { Input } from '~/components/form/input'
 import { InputFile } from '~/components/form/input-file'
 import { Select } from '~/components/form/select'
@@ -23,20 +24,18 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition-all duration-150 hover:bg-zinc-50"
+            <Button
+              variant="outline"
               type="reset"
+              form="settings"
               title="Clear form data"
             >
               Cancel
-            </button>
-            <button
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-violet-700"
-              type="submit"
-              form="settings"
-            >
+            </Button>
+
+            <Button type="submit" form="settings">
               Save
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -160,51 +159,36 @@ export default function Home() {
                   <Select.Item value="md" text="Markdown" />
                 </Select.Root>
                 <div className="flex items-center gap-3">
-                  <button
-                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
-                    type="button"
-                  >
+                  <Button variant="ghost" type="button">
                     <Bold
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
-                  <button
-                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
-                    type="button"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <Italic
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
-                  <button
-                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
-                    type="button"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <Link
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
-                  <button
-                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
-                    type="button"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <List
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
-                  <button
-                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
-                    type="button"
-                  >
+                  </Button>
+                  <Button variant="ghost" type="button">
                     <ListOrdered
-                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover:text-violet-500"
+                      className="transition-color h-4 w-4 text-zinc-500 duration-150 group-hover/ghost-button:text-violet-500"
                       strokeWidth={3}
                     />
-                  </button>
+                  </Button>
                 </div>
               </div>
 
@@ -233,19 +217,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center justify-end gap-2 pt-6">
-            <button
-              className="rounded-lg border border-zinc-300 px-4 py-2 text-sm font-semibold text-zinc-700 transition-all duration-150 hover:bg-zinc-50"
-              type="reset"
-              title="Clear form data"
-            >
+            <Button variant="outline" type="reset" title="Clear form data">
               Cancel
-            </button>
-            <button
-              className="rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition-all duration-150 hover:bg-violet-700"
-              type="submit"
-            >
-              Save
-            </button>
+            </Button>
+
+            <Button type="submit">Save</Button>
           </div>
         </form>
       </div>

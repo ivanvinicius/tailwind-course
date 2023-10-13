@@ -3,6 +3,7 @@
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 import { Trash, UploadCloud } from 'lucide-react'
 
+import { Button } from '~/components/button'
 import { formatBytes } from '~/utils/format-bytes'
 
 import { useInputFile } from './root'
@@ -43,13 +44,9 @@ export function InputFileList() {
                 </div>
               </div>
 
-              <button
-                className="group/button ml-auto border-0 bg-transparent "
-                type="button"
-                title="Sair da aplicação"
-              >
-                <Trash className="transition-color h-5 w-5 text-zinc-500 duration-150 group-hover/button:text-red-500" />
-              </button>
+              <Button variant="ghost" type="button" title="Apagar item">
+                <Trash className="transition-color h-5 w-5 text-zinc-500 duration-150 group-hover/ghost-button:text-red-500" />
+              </Button>
             </div>
           )
         })}
