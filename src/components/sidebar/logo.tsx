@@ -125,7 +125,7 @@ export function Logo() {
           </clipPath>
         </defs>
       </svg>
-      <span className="">Tailwind UI</span>
+      <span className="sr-only md:not-sr-only">Tailwind UI</span>
     </strong>
   )
 }
