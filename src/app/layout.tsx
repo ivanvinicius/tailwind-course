@@ -15,7 +15,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="antialiased" lang="en">
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-col lg:grid lg:grid-cols-app">
+        <div className="min-h-screen lg:grid lg:grid-cols-app">
           <Sidebar />
 
           <main className="px-4 pb-12 pt-24 lg:col-start-2 lg:px-8 lg:pb-12 lg:pt-8">

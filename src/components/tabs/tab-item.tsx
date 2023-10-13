@@ -2,6 +2,7 @@
 
 import * as Tabs from '@radix-ui/react-tabs'
 import { motion } from 'framer-motion'
+import { twMerge } from 'tailwind-merge'
 
 interface Props {
   value: string
@@ -12,10 +13,20 @@ interface Props {
 export function TabItem({ value, title, active = false }: Props) {
   return (
     <Tabs.Trigger
-      className="cursor-defaul group relative px-1 pb-4 text-sm font-medium text-zinc-500 outline-none transition-all duration-150 hover:text-violet-700 data-[state=active]:text-violet-700 "
+      className={twMerge([
+        'cursor-defaul group relative px-1 pb-4 text-sm font-medium outline-none',
+        'text-zinc-500  hover:text-violet-700 data-[state=active]:text-violet-700',
+        'transition-all duration-150',
+      ])}
       value={value}
     >
-      <span className="whitespace-nowrap rounded-sm ring-violet-300 transition-shadow duration-200 group-focus-visible:ring-1 group-focus-visible:ring-offset-8">
+      <span
+        className={twMerge([
+          'whitespace-nowrap rounded-sm ',
+          'ring-violet-300  group-focus-visible:ring-1 group-focus-visible:ring-offset-8',
+          'transition-shadow duration-200',
+        ])}
+      >
         {title}
       </span>
 

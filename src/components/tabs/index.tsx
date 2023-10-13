@@ -1,5 +1,6 @@
 'use client'
 
+import * as ScrollArea from '@radix-ui/react-scroll-area'
 import * as Tabs from '@radix-ui/react-tabs'
 import { useState } from 'react'
 
@@ -23,16 +24,27 @@ export function SettingsTabs() {
 
   return (
     <Tabs.Root value={activeTab} onValueChange={setActiveTab}>
-      <Tabs.List className="boder-zinc-200 mt-6 flex w-full items-center gap-4 border-b">
-        {tabs.map(({ value, title }) => (
-          <TabItem
-            key={value}
-            value={value}
-            title={title}
-            active={value === activeTab}
-          />
-        ))}
-      </Tabs.List>
+      <ScrollArea.Root className="w-full " type="scroll">
+        <ScrollArea.Viewport className="w-full overflow-x-scroll">
+          <Tabs.List className="boder-zinc-200 mt-6 flex w-full items-center gap-4 border-b">
+            {tabs.map(({ value, title }) => (
+              <TabItem
+                key={value}
+                value={value}
+                title={title}
+                active={value === activeTab}
+              />
+            ))}
+          </Tabs.List>
+        </ScrollArea.Viewport>
+
+        <ScrollArea.Scrollbar
+          className="flex h-0.5 translate-y-1.5 touch-none select-none flex-row bg-zinc-100"
+          orientation="horizontal"
+        >
+          <ScrollArea.Thumb className="relative flex-1 rounded-lg bg-zinc-300" />
+        </ScrollArea.Scrollbar>
+      </ScrollArea.Root>
     </Tabs.Root>
   )
 }
