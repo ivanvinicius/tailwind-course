@@ -12,10 +12,12 @@ interface Props {
 export function TabItem({ value, title, active = false }: Props) {
   return (
     <Tabs.Trigger
-      className="cursor-defaul relative px-1 pb-4 text-sm font-medium text-zinc-500 outline-none transition-all duration-150 hover:text-violet-700 data-[state=active]:text-violet-700 "
+      className="cursor-defaul group relative px-1 pb-4 text-sm font-medium text-zinc-500 outline-none transition-all duration-150 hover:text-violet-700 data-[state=active]:text-violet-700 "
       value={value}
     >
-      <span>{title}</span>
+      <span className="rounded-sm ring-violet-300 transition-shadow duration-200 group-focus-visible:ring-1 group-focus-visible:ring-offset-8">
+        {title}
+      </span>
 
       {active && (
         <motion.div

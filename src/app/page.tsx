@@ -4,7 +4,7 @@ import { Input } from '~/components/form/input'
 import { InputFile } from '~/components/form/input-file'
 import { Select } from '~/components/form/select'
 import { Textarea } from '~/components/form/textarea'
-import { SettingsTabs } from '~/page-components/settings/tabs'
+import { SettingsTabs } from '~/components/tabs'
 
 export default function Home() {
   return (
@@ -161,7 +161,7 @@ export default function Home() {
                 </Select.Root>
                 <div className="flex items-center gap-3">
                   <button
-                    className="group border-0 bg-transparent"
+                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
                     type="button"
                   >
                     <Bold
@@ -170,7 +170,7 @@ export default function Home() {
                     />
                   </button>
                   <button
-                    className="group border-0 bg-transparent"
+                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
                     type="button"
                   >
                     <Italic
@@ -179,7 +179,7 @@ export default function Home() {
                     />
                   </button>
                   <button
-                    className="group border-0 bg-transparent"
+                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
                     type="button"
                   >
                     <Link
@@ -188,7 +188,7 @@ export default function Home() {
                     />
                   </button>
                   <button
-                    className="group border-0 bg-transparent"
+                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
                     type="button"
                   >
                     <List
@@ -197,7 +197,7 @@ export default function Home() {
                     />
                   </button>
                   <button
-                    className="group border-0 bg-transparent"
+                    className="group rounded-lg border-0 bg-transparent p-2 outline-none transition-shadow duration-150 focus:ring-1 focus:ring-violet-300"
                     type="button"
                   >
                     <ListOrdered
