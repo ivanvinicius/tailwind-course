@@ -42,11 +42,16 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateY(-2px)' },
           to: { opacity: '1', transform: 'translateY(0px)' },
         },
+        slideUpAndFade: {
+          from: { opacity: '0', transform: 'translateY(2px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
       },
 
       animation: {
         slideDownAndFade:
-          'slideDownAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+          'slideDownAndFade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUpAndFade: 'slideUpAndFade 300ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

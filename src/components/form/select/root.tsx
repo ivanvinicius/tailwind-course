@@ -21,7 +21,7 @@ export function SelectRoot({ placeholder = '', children, ...rest }: Props) {
 
       <RadixSelect.Portal>
         <RadixSelect.Content
-          className="animate-slideDownAndFade z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
+          className="z-10 w-[--radix-select-trigger-width] animate-slideDownAndFade overflow-hidden rounded-lg border border-zinc-200 bg-white"
           side="bottom"
           sideOffset={4}
           position="popper"
