@@ -15,7 +15,7 @@ export function InputFileList() {
         {files.map(({ name, size }) => {
           return (
             <InputFileListItem
-              state="error"
+              state="complete"
               key={name}
               name={name}
               size={size}

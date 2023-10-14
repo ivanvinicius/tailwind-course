@@ -15,7 +15,7 @@ export function TabItem({ value, title, active = false }: Props) {
     <Tabs.Trigger
       className={twMerge([
         'cursor-defaul group relative px-1 pb-4 text-sm font-medium outline-none',
-        'text-zinc-500  hover:text-violet-700 data-[state=active]:text-violet-700',
+        'text-zinc-500  hover:text-violet-700 data-[state=active]:text-violet-700 dark:hover:text-violet-300 dark:data-[state=active]:text-violet-300',
         'transition-all duration-150',
       ])}
       value={value}
@@ -23,7 +23,7 @@ export function TabItem({ value, title, active = false }: Props) {
       <span
         className={twMerge([
           'whitespace-nowrap rounded-sm ',
-          'ring-violet-300  group-focus-visible:ring-1 group-focus-visible:ring-offset-8',
+          'ring-violet-300 group-focus-visible:ring-1  group-focus-visible:ring-offset-8 dark:ring-violet-300 dark:group-focus-visible:ring-offset-0',
           'transition-shadow duration-200',
         ])}
       >
@@ -32,7 +32,7 @@ export function TabItem({ value, title, active = false }: Props) {
 
       {active && (
         <motion.div
-          className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700"
+          className="absolute -bottom-px left-0 right-0 h-0.5 bg-violet-700 dark:bg-violet-300"
           layoutId="activeTab"
         />
       )}
